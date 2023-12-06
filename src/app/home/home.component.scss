@@ -198,6 +198,41 @@
     font-family: 'Domine', serif;
     font-weight: 400;
   }
+  .carousel-control-prev{
+    left: 25%;
+    bottom: -50%;
+  }
+  .carousel-control-next{
+    bottom: -50%;
+    right: 25%;
+  }
+  .arrow-prev{
+    transform: rotate(360deg);
+  }
+  .arrow-next{
+    transform: rotate(-180deg);
+  }
+  .approach_carousel{
+    .approach_carousel_item_title{
+      margin-top: 24px;
+      font-family: 'Domine', serif;
+      font-size: 24px;
+      line-height: 32px;
+      @media (min-width: 1025px) {
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+    .approach_carousel_item_content{
+      font-size: 14px;
+      line-height: 24px;
+      font-family: 'Poppins', sans-serif;
+      @media (min-width: 1025px) {
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+  }
 }
 
 .our_standard {
