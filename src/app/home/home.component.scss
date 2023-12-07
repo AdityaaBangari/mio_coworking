@@ -3,7 +3,7 @@
     height: 64px;
     width: 100%;
     background-color: #fdfbf7;
-    border-bottom: 1px solid #b9beb9;
+    border-bottom: 1px solid #faf0e6;
     @media (min-width: 768px) {
       height: 48px;
     }
@@ -79,17 +79,18 @@
     padding: 40px 0;
 
     .intro-content {
-      font-size: 40px;
+      font-size: 33px;
       line-height: 48px;
       font-weight: 300;
+      text-align: justify;
       @media (min-width: 1025px) {
-        font-size: 40px;
+        font-size: 33px;
         line-height: 50px;
       }
 
       .intro-section_bold {
         font-family: 'EB Garamond', serif;
-        font-size: 43px;
+        font-size: 38px;
       }
     }
   }
@@ -107,13 +108,29 @@
 
   .location_heading {
     font-family: 'EB Garamond', serif;
-    font-size: 48px;
+    font-size: 45px;
     line-height: 56px;
     font-weight: 400;
     color: #2D2D2D;
     @media (min-width: 1025px) {
-      font-size: 56px;
+      font-size: 45px;
       line-height: 64px;
+    }
+  }
+  .find-us{
+    font-family: 'Tommy', serif;
+    font-size: 30px;
+    line-height: 56px;
+    font-weight: 400;
+    color: #2D2D2D;
+    @media (min-width: 1025px) {
+      font-size: 30px;
+      line-height: 64px;
+    }
+    a {
+      text-decoration-style: wavy;
+      //text-decoration: none;
+      color: red;
     }
   }
 }
@@ -128,13 +145,14 @@
   }
 
   .membership_heading_1 {
-    font-weight: 200;
+    font-weight: 300;
     font-family: 'Tommy',sans-serif;
     font-size: 32px;
     line-height: 40px;
     padding: 0 24px 24px;
+    text-align: justify;
     @media (min-width: 1025px) {
-      font-size: 40px;
+      font-size: 32px;
       line-height: 48px;
     }
     @media (min-width: 768px) {
@@ -146,7 +164,7 @@
   .membership_heading_2 {
     font-family: 'EB Garamond', serif;
     font-weight: 400;
-    font-size: 45px;
+    font-size:38px;
   }
 
   .membership_heading {
@@ -166,7 +184,7 @@
     font-family: 'Tommy',sans-serif;
     font-size: 16px;
     line-height: 24px;
-    opacity: 0.8;
+    //opacity: 0.8;
   }
 }
 
@@ -181,13 +199,13 @@
   }
 
   .approach_1 {
-    font-weight: 200;
+    font-weight: 300;
     font-family: 'Tommy',sans-serif;
     font-size: 32px;
     line-height: 40px;
     padding: 0 24px 24px;
     @media (min-width: 1025px) {
-      font-size: 40px;
+      font-size: 35px;
       line-height: 48px;
     }
     @media (min-width: 768px) {
@@ -253,7 +271,7 @@
     font-size: 32px;
     line-height: 40px;
     padding: 0 24px 24px;
-    //opacity: 0.95;
+    ////opacity: 0.95;
     @media (min-width: 1025px) {
       font-size: 40px;
       line-height: 48px;
@@ -270,7 +288,7 @@
     font-family: 'EB Garamond', serif;
     font-weight: 400;
     margin: 0 0 1em;
-    opacity: 0.9;
+    //opacity: 0.9;
     @media (min-width: 1025px) {
       font-size: 20px;
       line-height: 32px;
@@ -283,7 +301,7 @@
       line-height: 24px;
       font-family: 'Tommy',sans-serif;
       margin-bottom: .5em;
-      opacity: 0.9;
+      //opacity: 0.9;
       @media (min-width: 1025px) {
         font-size: 14px;
         line-height: 24px;
@@ -301,6 +319,10 @@
     padding: 80px;
   }
 
+  .footer-logo{
+    width: 225px;
+    height: auto;
+  }
   .footer_heading{
     font-size: 20px;
     line-height: 32px;
