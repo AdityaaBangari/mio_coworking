@@ -11,4 +11,10 @@ html, body {
   width: 100%;
   background-color: #FDFBF7;
 }
-
+@font-face {
+  font-family: 'Tommy';
+  src:  url('./assets/fonts/MADE_TOMMY_Thin_PERSONAL USE.otf') format('opentype'),
+  url('./assets/fonts/MADE_TOMMY_Regular_PERSONAL USE.otf') format('opentype'),
+  url('./assets/fonts/MADE TOMMY Medium_PERSONAL USE.otf') format('opentype');
+  /* Add more file formats if your font supports them */
+}

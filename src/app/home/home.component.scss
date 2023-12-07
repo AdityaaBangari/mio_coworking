@@ -9,7 +9,7 @@
     }
 
     .mio-nav_title {
-      font-family: 'Domine', serif;
+      font-family: 'EB Garamond', serif;
       font-weight: 700;
       font-size: 20px;
     }
@@ -17,7 +17,7 @@
     .nav_link_container {
       display: flex;
       align-items: center;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Tommy',sans-serif;
       padding: 0 24px;
       border-left: 1px solid #b9beb9;
 
@@ -45,7 +45,7 @@
       .main_heading {
         font-size: 48px;
         line-height: 56px;
-        font-family: 'Domine', serif;
+        font-family: 'EB Garamond', serif;
 
         @media (min-width: 1025px) {
           font-size: 56px;
@@ -83,12 +83,13 @@
       line-height: 48px;
       font-weight: 300;
       @media (min-width: 1025px) {
-        font-size: 50px;
-        line-height: 56px;
+        font-size: 40px;
+        line-height: 50px;
       }
 
       .intro-section_bold {
-        font-family: 'Domine', serif;
+        font-family: 'EB Garamond', serif;
+        font-size: 43px;
       }
     }
   }
@@ -105,7 +106,7 @@
   }
 
   .location_heading {
-    font-family: 'Domine', serif;
+    font-family: 'EB Garamond', serif;
     font-size: 48px;
     line-height: 56px;
     font-weight: 400;
@@ -128,7 +129,7 @@
 
   .membership_heading_1 {
     font-weight: 200;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Tommy',sans-serif;
     font-size: 32px;
     line-height: 40px;
     padding: 0 24px 24px;
@@ -143,15 +144,16 @@
   }
 
   .membership_heading_2 {
-    font-family: 'Domine', serif;
+    font-family: 'EB Garamond', serif;
     font-weight: 400;
+    font-size: 45px;
   }
 
   .membership_heading {
     font-size: 24px;
     line-height: 32px;
-    font-family: 'Domine', serif;
-    font-weight: 300;
+    font-family: 'EB Garamond', serif;
+    font-weight: 500;
     @media (min-width: 1025px) {
       font-size: 24px;
       line-height: 32px;
@@ -161,7 +163,7 @@
   .membership_content {
     font-style: normal;
     font-weight: 400;
-    font-family: Poppins, sans-serif;
+    font-family: 'Tommy',sans-serif;
     font-size: 16px;
     line-height: 24px;
     opacity: 0.8;
@@ -180,7 +182,7 @@
 
   .approach_1 {
     font-weight: 200;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Tommy',sans-serif;
     font-size: 32px;
     line-height: 40px;
     padding: 0 24px 24px;
@@ -195,8 +197,9 @@
   }
 
   .approach_2 {
-    font-family: 'Domine', serif;
+    font-family: 'EB Garamond', serif;
     font-weight: 400;
+    font-size: 45px;
   }
   .carousel-control-prev{
     left: 25%;
@@ -215,7 +218,7 @@
   .approach_carousel{
     .approach_carousel_item_title{
       margin-top: 24px;
-      font-family: 'Domine', serif;
+      font-family: 'EB Garamond', serif;
       font-size: 24px;
       line-height: 32px;
       @media (min-width: 1025px) {
@@ -226,7 +229,7 @@
     .approach_carousel_item_content{
       font-size: 14px;
       line-height: 24px;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Tommy',sans-serif;
       @media (min-width: 1025px) {
         font-size: 14px;
         line-height: 24px;
@@ -245,12 +248,12 @@
   }
 
   .our_standard_heading {
-    font-family: 'Domine', serif;
-    font-weight: 300;
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
     font-size: 32px;
     line-height: 40px;
     padding: 0 24px 24px;
-    opacity: 0.95;
+    //opacity: 0.95;
     @media (min-width: 1025px) {
       font-size: 40px;
       line-height: 48px;
@@ -264,7 +267,7 @@
   .standard_title {
     font-size: 20px;
     line-height: 32px;
-    font-family: 'Domine', serif;
+    font-family: 'EB Garamond', serif;
     font-weight: 400;
     margin: 0 0 1em;
     opacity: 0.9;
@@ -278,7 +281,7 @@
     li {
       font-size: 14px;
       line-height: 24px;
-      font-family: Poppins, sans-serif;
+      font-family: 'Tommy',sans-serif;
       margin-bottom: .5em;
       opacity: 0.9;
       @media (min-width: 1025px) {
@@ -301,7 +304,7 @@
   .footer_heading{
     font-size: 20px;
     line-height: 32px;
-    font-family: 'Domine', serif;
+    font-family: 'EB Garamond', serif;
     font-weight: 400;
     margin: 0 0 1em;
   }
