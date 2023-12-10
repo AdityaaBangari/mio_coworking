@@ -152,6 +152,10 @@ export class HomeComponent implements OnInit {
     });
   }
   private initMap(): void {
+    const myIcon = L.icon({
+      iconUrl: 'myIcon.png',
+      // ...
+    });
     // Create a map and set the initial view
     this.map = L.map('map').setView([28.517479098394748, 77.19832845577525], 20);
 
