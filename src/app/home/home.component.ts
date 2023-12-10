@@ -3,16 +3,20 @@ declare var $: any; // Declare jQuery to use it in Angular
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
+import * as L from 'leaflet';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
+
 export class HomeComponent implements OnInit {
+  private map: L.Map | undefined;
   constructor(private el: ElementRef) {
   }
   ngOnInit(): void {
     this.scrollEffect();
+    this.initMap();
   }
 
   scrollEffect() {
@@ -146,5 +150,36 @@ export class HomeComponent implements OnInit {
         scrub: true, // Set to true for a smoother effect during scrolling
       },
     });
+  }
+  private initMap(): void {
+    // Create a map and set the initial view
+    this.map = L.map('map').setView([28.517479098394748, 77.19832845577525], 20);
+
+    // Add a tile layer (e.g., OpenStreetMap)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: 'OpenStreetMap',
+    }).addTo(this.map);
+
+    // Add a marker
+    const marker = L.marker([28.517479098394748, 77.19832845577525]).addTo(this.map)
+      .bindPopup('Mio Coworks')
+      .openPopup();
+
+    // Handle map click event
+    this.map.on('click', (event: L.LeafletMouseEvent) => {
+      // Redirect to Google Maps with the clicked coordinates
+      const lat = event.latlng.lat;
+      const lng = event.latlng.lng;
+      this.redirectToGoogleMaps(lat, lng);
+    });
+  }
+
+  private redirectToGoogleMaps(lat: number, lng: number): void {
+    // Construct the Google Maps URL with the clicked coordinates
+    const googleMapsUrl =
+      'https://www.google.com/maps/place/Mio+Coworks/@28.5174985,77.198358,20z/data=!4m14!1m7!3m6!1s0x390ce18d9bffd5a7:0x1d047cd16cc6fe00!2sMio+Coworks!8m2!3d28.5174594!4d77.1983305!16s%2Fg%2F11vllzbb6h!3m5!1s0x390ce18d9bffd5a7:0x1d047cd16cc6fe00!8m2!3d28.5174594!4d77.1983305!16s%2Fg%2F11vllzbb6h?entry=ttu';
+
+    // Open the URL in a new tab/window
+    window.open(googleMapsUrl, '_blank');
   }
 }
