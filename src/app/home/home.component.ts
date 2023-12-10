@@ -41,26 +41,6 @@ export class HomeComponent implements OnInit {
         scrub: true, // Set to true for a smoother effect during scrolling
       },
     });
-    gsap.from('.fade-in_find_us_image', {
-      y: 100, // Initial position below the viewport
-      opacity: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: this.el.nativeElement.querySelector('.find_us_container2'),
-        start: 'top 80%', // Adjust as needed
-        scrub: true, // Set to true for a smoother effect during scrolling
-      },
-    });
-    gsap.from('.fade-in_find_us2', {
-      y: 100, // Initial position below the viewport
-      opacity: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: this.el.nativeElement.querySelector('.find_us_container1'),
-        start: 'top 80%', // Adjust as needed
-        scrub: true, // Set to true for a smoother effect during scrolling
-      },
-    });
 
     gsap.from('.fade-in_membership_heading', {
       y: 100, // Initial position below the viewport
