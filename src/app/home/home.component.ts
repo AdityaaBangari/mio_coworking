@@ -1,10 +1,7 @@
 import {AfterViewInit, Component, ElementRef, OnInit} from '@angular/core';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-// import SplitText from 'gsap/dist/SplitText';
 import * as L from 'leaflet';
-gsap.registerPlugin(ScrollTrigger);
-
+import {gsap} from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
