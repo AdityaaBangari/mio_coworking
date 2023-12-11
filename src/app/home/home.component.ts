@@ -2,7 +2,6 @@ import {AfterViewInit, Component, ElementRef, OnInit} from '@angular/core';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 // import SplitText from 'gsap/dist/SplitText';
-gsap.registerPlugin(ScrollTrigger);
 // gsap.registerPlugin(SplitText);
 import * as L from 'leaflet';
 @Component({
@@ -16,12 +15,12 @@ export class HomeComponent implements AfterViewInit {
   constructor(private el: ElementRef) {
   }
   ngAfterViewInit(): void {
+    gsap.registerPlugin(ScrollTrigger);
     this.scrollEffect();
     this.initMap();
   }
 
   scrollEffect() {
-    gsap.registerPlugin(ScrollTrigger);
     gsap.from('.fade-in', {
       y: 100, // Initial position below the viewport
       opacity: 0,
