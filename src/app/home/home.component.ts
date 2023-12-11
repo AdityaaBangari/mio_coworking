@@ -2,6 +2,7 @@ import {AfterViewInit, Component, ElementRef, OnInit} from '@angular/core';
 import * as L from 'leaflet';
 import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
+import {PageScrollService } from 'ngx-page-scroll-core';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -10,7 +11,8 @@ import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 export class HomeComponent implements AfterViewInit {
   private map: L.Map | undefined;
-  constructor(private el: ElementRef) {
+  constructor(private el: ElementRef,
+              private pageScrollService: PageScrollService) {
   }
   ngAfterViewInit(): void {
     gsap.registerPlugin(ScrollTrigger);
@@ -25,7 +27,8 @@ export class HomeComponent implements AfterViewInit {
       scrollTrigger: {
         trigger: this.el.nativeElement.querySelector('.intro-section_container'),
         start: 'top 80%', // Adjust as needed
-        scrub: true // Set to true for a smoother effect during scrolling
+        end: 'top 40%',
+        scrub: true, // Set to true for a smoother effect during scrolling
       },
       y: 100, // Initial position below the viewport
       opacity: 0,
@@ -136,7 +139,7 @@ export class HomeComponent implements AfterViewInit {
     });
   }
 
-  private initMap(): void {
+   initMap(): void {
     const myIcon = L.icon({
       iconUrl: 'myIcon.png',
       // ...
@@ -163,12 +166,32 @@ export class HomeComponent implements AfterViewInit {
     });
   }
 
-  private redirectToGoogleMaps(lat: number, lng: number): void {
+   redirectToGoogleMaps(lat: number, lng: number): void {
     // Construct the Google Maps URL with the clicked coordinates
     const googleMapsUrl =
       'https://www.google.com/maps/place/Mio+Coworks/@28.5174985,77.198358,20z/data=!4m14!1m7!3m6!1s0x390ce18d9bffd5a7:0x1d047cd16cc6fe00!2sMio+Coworks!8m2!3d28.5174594!4d77.1983305!16s%2Fg%2F11vllzbb6h!3m5!1s0x390ce18d9bffd5a7:0x1d047cd16cc6fe00!8m2!3d28.5174594!4d77.1983305!16s%2Fg%2F11vllzbb6h?entry=ttu';
 
     // Open the URL in a new tab/window
     window.open(googleMapsUrl, '_blank');
+  }
+
+  scrollToSection(sectionId: string): void {
+    const targetElement = this.el.nativeElement.querySelector(`#${sectionId}`);
+    console.log(sectionId);
+
+    if (targetElement) {
+      const parentElement = targetElement.parentNode;
+
+      if (parentElement) {
+        this.pageScrollService.scroll({
+          document: this.el.nativeElement,
+          scrollTarget: targetElement,
+        });
+      } else {
+        console.error('Parent element is undefined for target element:', targetElement);
+      }
+    } else {
+      console.error('Target element is undefined for section ID:', sectionId);
+    }
   }
 }

@@ -114,7 +114,7 @@
       font-weight: 300;
       text-align: justify;
       @media (min-width: 768px) {
-        font-size: 33px;
+        font-size: 30px;
         line-height: 50px;
       }
 
@@ -142,12 +142,12 @@
 
   .location_heading {
     font-family: 'EB Garamond', serif;
-    font-size: 45px;
+    font-size: 40px;
     line-height: 56px;
     font-weight: 400;
     color: #2D2D2D;
     @media (min-width: 1025px) {
-      font-size: 45px;
+      font-size: 40px;
       line-height: 64px;
     }
   }
@@ -283,8 +283,20 @@
   .carousel_item_image {
     min-height: 350px;
     object-fit: cover;
+    @media (max-width: 768px) {
+      object-fit: fill;
+    }
   }
-
+    .hide_in_mobile{
+      @media (max-width: 576px) {
+        display: none;
+      }
+    }
+    .hide_in_tablet{
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
   .approach_carousel_item_title {
     margin-top: 24px;
     font-family: 'EB Garamond', serif;

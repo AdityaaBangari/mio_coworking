@@ -8,8 +8,12 @@
       </div>
 
       <div class="nav_link_container">
-<!--        <span>About Us</span>-->
-<!--        <span class="mx-2 dot">&#x2022;</span>-->
+        <ul>
+          <li>
+            <a (click)="scrollToSection('introsection')">About Us</a>
+          </li>
+        </ul>
+        <span class="mx-2 dot">&#x2022;</span>
         <span>Contact Us</span>
       </div>
     </div>
@@ -39,7 +43,7 @@
 </div>
 
 <!--intro-1 -->
-<div class="container-fluid intro-section">
+<div class="container-fluid intro-section " id="introsection" #introsection>
   <div class="row">
     <div class="col-12">
       <div class="container">
@@ -64,12 +68,15 @@
     <div class="col-12">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-sm-6 px-0 find_us_container1">
+          <div class="col-12 px-0 find_us_container1">
             <h2 class="location_heading fade-in_find_us1">Where you’ll find us</h2>
           </div>
-          <div class="col-12 col-sm-6 px-0 find_us_container1">
+        </div>
+        <div class="row mt-2" >
+          <div class="col-12 pl-sm-0 find_us_container2">
             <div id="map" class="fade-in_find_us1" style="height: 400px;"></div>
           </div>
+
         </div>
       </div>
     </div>
@@ -200,7 +207,7 @@
                 <div class="carousel-item active">
                   <div class="container-fluid approach_carousel_item_container">
                     <div class="row">
-                      <div class="col-6 col-lg-4">
+                      <div class="col-12 col-sm-6 col-lg-4">
                         <img class="img-fluid carousel_item_image fade-in_our_approach_item" src="./assets/images/plant.jfif" alt="gif">
                         <h3 class="approach_carousel_item_title fade-in_our_approach_item">
                           Home from Home
@@ -209,7 +216,7 @@
                           We've got cafe surrounds, comfy chairs, plenty of plants and  cosy lighting to keep you happy, productive and charged up.
                         </p>
                       </div>
-                      <div class="col-6 col-lg-4">
+                      <div class="col-12 col-sm-6 col-lg-4 hide_in_mobile">
                         <img class="img-fluid carousel_item_image fade-in_our_approach_item" src="./assets/images/money.jfif" alt="gif">
                         <h3 class="approach_carousel_item_title fade-in_our_approach_item">
                           Fair Use
@@ -219,7 +226,7 @@
                         </p>
                       </div>
 
-                      <div class="col-6 col-lg-4">
+                      <div class="col-12 col-sm-6 col-lg-4 hide_in_tablet">
                         <img class="img-fluid carousel_item_image fade-in_our_approach_item" src="./assets/images/sofa.jfif" alt="gif">
                         <h3 class="approach_carousel_item_title fade-in_our_approach_item">
                           Rest and Play
@@ -231,10 +238,10 @@
                     </div>
                   </div>
                 </div>
-                <div class="carousel-item trying">
+                <div class="carousel-item ">
                   <div class="container-fluid">
                     <div class="row">
-                      <div class="col-6 col-lg-4">
+                      <div class="col-12 col-sm-6 col-lg-4">
                         <img class="img-fluid carousel_item_image fade-in_our_approach_item" src="./assets/images/team.jfif" alt="gif">
                         <h3 class="approach_carousel_item_title fade-in_our_approach_item">
                           Part of the Fam
@@ -242,35 +249,56 @@
                         <p class="approach_carousel_item_content fade-in_our_approach_item">
                           As a member of the Mio fam, you'll get mates' rates on our upcoming tie ups with restaurants and bars.                        </p>
                       </div>
-<!--                      <div class="col-4">-->
-<!--                        <img class="img-fluid" src="./assets/images/rest-and-play.gif" alt="gif">-->
-<!--                        <h3 class="approach_carousel_item_title">-->
-<!--                          Fair Use-->
-<!--                        </h3>-->
-<!--                        <p class="approach_carousel_item_content">-->
-<!--                          Lorem ipsum dolor sit amet, consectetur adipisicing elit.-->
-<!--                        </p>-->
-<!--                      </div>-->
+                      <div class="col-12 col-sm-6 col-lg-4 hide_in_mobile">
+                        <img class="img-fluid carousel_item_image fade-in_our_approach_item" src="./assets/images/coffee.jfif" alt="gif">
+                        <h3 class="approach_carousel_item_title fade-in_our_approach_item">
+                          Bond Over Coffee
+                        </h3>
+                        <p class="approach_carousel_item_content fade-in_our_approach_item">
+                          Escape the afternoon slump at our coworking space, where we elevate your workday with the aromatic richness of high-quality Arabica coffee delivered right to your desk.                       </p>
+                      </div>
 
-<!--                      <div class="col-4">-->
-<!--                        <img class="img-fluid carousel_item_image" src="./assets/images/rest-and-play.gif" alt="gif">-->
-<!--                        <h3 class="approach_carousel_item_title">-->
-<!--                          Fair Use-->
-<!--                        </h3>-->
-<!--                        <p class="approach_carousel_item_content">-->
-<!--                          Lorem ipsum dolor sit amet, consectetur adipisicing elit.-->
-<!--                        </p>-->
-<!--                      </div>-->
+                      <div class="col-12 col-sm-6 col-lg-4 hide_in_tablet">
+                        <img class="img-fluid carousel_item_image fade-in_our_approach_item" src="./assets/images/printer.jfif" alt="gif">
+                        <h3 class="approach_carousel_item_title fade-in_our_approach_item">
+                          Print, fax, copy, scan.
+                        </h3>
+                        <p class="approach_carousel_item_content fade-in_our_approach_item">
+                          Mio coworks has a state of the art multifunctional printer ensuring your workday is efficient and enjoyable. </p>                    </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item ">
+                  <div class="container-fluid">
+                    <div class="row">
 
-<!--                      <div class="col-4">-->
-<!--                        <img class="img-fluid carousel_item_image" src="./assets/images/home-from-home.gif" alt="gif">-->
-<!--                        <h3 class="approach_carousel_item_title">-->
-<!--                          Rest and Play-->
-<!--                        </h3>-->
-<!--                        <p class="approach_carousel_item_content">-->
-<!--                          Lorem ipsum dolor sit amet, consectetur adipisicing elit.-->
-<!--                        </p>-->
-<!--                      </div>-->
+                      <div class="col-12 col-sm-6 col-lg-4">
+                        <img class="img-fluid carousel_item_image fade-in_our_approach_item" src="./assets/images/social.jfif" alt="gif">
+                        <h3 class="approach_carousel_item_title fade-in_our_approach_item">
+                          Social Media Management
+                        </h3>
+                        <p class="approach_carousel_item_content fade-in_our_approach_item">
+                          Our dedicated social media marketing team is ready to amplify your brand, ensuring that all work and no online presence becomes a thing of the past.
+                        </p>
+                      </div>
+                      <div class="col-12 col-sm-6 col-lg-4 hide_in_mobile">
+                        <img class="img-fluid carousel_item_image fade-in_our_approach_item" src="./assets/images/travel.jfif" alt="gif">
+                        <h3 class="approach_carousel_item_title fade-in_our_approach_item">
+                          Travel Bookings at your ease
+                        </h3>
+                        <p class="approach_carousel_item_content fade-in_our_approach_item">
+                          Seize the spontaneity of business travel with ease at our coworking space, where our dedicated support team can assist in last-minute travel bookings, transforming potential chaos into seamless adventures.
+                        </p>
+                      </div>
+                      <div class="col-12 col-sm-6 col-lg-4 hide_in_tablet">
+                        <img class="img-fluid carousel_item_image fade-in_our_approach_item" src="./assets/images/balloon.jfif" alt="gif">
+                        <h3 class="approach_carousel_item_title fade-in_our_approach_item">
+                          We got your events planned!
+                        </h3>
+                        <p class="approach_carousel_item_content fade-in_our_approach_item">
+                          Let us handle the details of your next office party while you focus on the daily grind. All work and no play? We've got the perfect balance for a vibrant workplace experience.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
