@@ -3,11 +3,6 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
-    "paths": {
-      "gsap": ["./path/to/gsap"],
-      "gsap/*": ["./path/to/gsap/*"],
-      "~leaflet": ["node_modules/leaflet"]
-    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -30,9 +25,6 @@
       "dom"
     ]
   },
-  "files": [
-    "node_modules/gsap/types/index.d.ts"
-  ],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

@@ -25,117 +25,117 @@ export class HomeComponent implements AfterViewInit {
 
   scrollEffect() {
     gsap.from('.fade-in', {
-      y: 100, // Initial position below the viewport
-      opacity: 0,
-      duration: 1,
       scrollTrigger: {
         trigger: this.el.nativeElement.querySelector('.intro-section_container'),
         start: 'top 80%', // Adjust as needed
         scrub: true // Set to true for a smoother effect during scrolling
       },
-    });
-
-    gsap.from('.fade-in_find_us1', {
       y: 100, // Initial position below the viewport
       opacity: 0,
       duration: 1,
+    });
+
+    gsap.from('.fade-in_find_us1', {
       scrollTrigger: {
         trigger: this.el.nativeElement.querySelector('.find_us_container1'),
         start: 'top 80%', // Adjust as needed
         end: 'top 40%',
         scrub: true, // Set to true for a smoother effect during scrolling,
       },
+      y: 100, // Initial position below the viewport
+      opacity: 0,
+      duration: 1
     });
 
     gsap.from('.fade-in_membership_heading', {
-      y: 100, // Initial position below the viewport
-      opacity: 0,
-      duration: 1,
       scrollTrigger: {
         trigger: this.el.nativeElement.querySelector('.membership_container'),
         start: 'top 80%', // Adjust as needed,
         end: 'top 40%',
         scrub: true, // Set to true for a smoother effect during scrolling
       },
+      y: 100, // Initial position below the viewport
+      opacity: 0,
+      duration: 1
     });
 
     gsap.from('.fade-in_membership_item', {
-      y: 100, // Initial position below the viewport
-      opacity: 0,
-      duration: 1,
       scrollTrigger: {
         trigger: this.el.nativeElement.querySelector('.membership_container'),
         start: 'top 80%', // Adjust as needed,
         end: 'top 40%',
         scrub: true, // Set to true for a smoother effect during scrolling
       },
+      y: 100, // Initial position below the viewport
+      opacity: 0,
+      duration: 1
     });
 
     gsap.from('.fade-in_our_approach_heading', {
-      y: 100, // Initial position below the viewport
-      opacity: 0,
-      duration: 1,
       scrollTrigger: {
         trigger: this.el.nativeElement.querySelector('.approach_heading_container'),
         start: 'top 80%',
         end: 'top 40%', // Adjust as needed// Adjust as needed
         scrub: true, // Set to true for a smoother effect during scrolling
       },
-    });
-    gsap.from('.fade-in_our_approach_carousel_prev', {
-      x: 100, // Initial position below the viewport
-      opacity: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: this.el.nativeElement.querySelector('.approach_heading_container'),
-        start: 'top 80%', // Adjust as needed
-        end: 'top 40%', // Adjust as needed
-        scrub: true, // Set to true for a smoother effect during scrolling
-      },
-    });
-    gsap.from('.fade-in_our_approach_carousel_next', {
-      x: -100, // Initial position below the viewport
-      opacity: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: this.el.nativeElement.querySelector('.approach_heading_container'),
-        start: 'top 80%', // Adjust as needed
-        end: 'top 40%', // Adjust as needed
-        scrub: true, // Set to true for a smoother effect during scrolling
-      },
-    });
-    gsap.from('.fade-in_our_approach_item', {
       y: 100, // Initial position below the viewport
       opacity: 0,
-      duration: 1,
+      duration: 1
+    });
+    gsap.from('.fade-in_our_approach_carousel_prev', {
+      scrollTrigger: {
+        trigger: this.el.nativeElement.querySelector('.approach_heading_container'),
+        start: 'top 80%', // Adjust as needed
+        end: 'top 40%', // Adjust as needed
+        scrub: true, // Set to true for a smoother effect during scrolling
+      },
+      x: 100, // Initial position below the viewport
+      opacity: 0,
+      duration: 1
+    });
+    gsap.from('.fade-in_our_approach_carousel_next', {
+      scrollTrigger: {
+        trigger: this.el.nativeElement.querySelector('.approach_heading_container'),
+        start: 'top 80%', // Adjust as needed
+        end: 'top 40%', // Adjust as needed
+        scrub: true, // Set to true for a smoother effect during scrolling
+      },
+      x: -100, // Initial position below the viewport
+      opacity: 0,
+      duration: 1
+    });
+    gsap.from('.fade-in_our_approach_item', {
       scrollTrigger: {
         trigger: this.el.nativeElement.querySelector('.approach_carousel_item_container'),
         start: 'top 80%',
         end: 'top 30%', // Adjust as needed// Adjust as needed
         scrub: true, // Set to true for a smoother effect during scrolling
       },
-    });
-    gsap.from('.our_standard_heading', {
       y: 100, // Initial position below the viewport
       opacity: 0,
-      duration: 1,
+      duration: 1
+    });
+    gsap.from('.our_standard_heading', {
       scrollTrigger: {
         trigger: this.el.nativeElement.querySelector('.our_standard_container'),
         start: 'top 80%',
         end: 'top 40%', // Adjust as needed// Adjust as needed
         scrub: true, // Set to true for a smoother effect during scrolling
       },
-    });
-    gsap.from('.our_standard_item_heading', {
       y: 100, // Initial position below the viewport
       opacity: 0,
-      duration: 1,
+      duration: 1
+    });
+    gsap.from('.our_standard_item_heading', {
       scrollTrigger: {
         trigger: this.el.nativeElement.querySelector('.our_standard_item_container'),
         start: 'top 80%',
         end: 'top 40%', // Adjust as needed// Adjust as needed
         scrub: true, // Set to true for a smoother effect during scrolling
       },
+      y: 100, // Initial position below the viewport
+      opacity: 0,
+      duration: 1
     });
   }
 
