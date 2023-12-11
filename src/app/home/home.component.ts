@@ -22,6 +22,7 @@ export class HomeComponent implements AfterViewInit {
   }
 
   scrollEffect() {
+    gsap.registerPlugin(ScrollTrigger);
     gsap.from('.fade-in', {
       y: 100, // Initial position below the viewport
       opacity: 0,

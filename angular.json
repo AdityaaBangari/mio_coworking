@@ -35,7 +35,9 @@
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "node_modules/gsap/dist/gsap.js",
+              "node_modules/gsap/dist/ScrollTrigger.js"
             ]
           },
           "configurations": {
@@ -102,7 +104,9 @@
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "node_modules/gsap/dist/gsap.js",
+              "node_modules/gsap/dist/ScrollTrigger.js"
             ]
           }
         }
