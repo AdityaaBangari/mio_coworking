@@ -1,8 +1,10 @@
-import {Component, ElementRef, OnInit} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, OnInit} from '@angular/core';
 declare var $: any; // Declare jQuery to use it in Angular
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+// import SplitText from 'gsap/dist/SplitText';
 gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(SplitText);
 import * as L from 'leaflet';
 @Component({
   selector: 'app-home',
@@ -10,11 +12,11 @@ import * as L from 'leaflet';
   styleUrls: ['./home.component.scss']
 })
 
-export class HomeComponent implements OnInit {
+export class HomeComponent implements AfterViewInit {
   private map: L.Map | undefined;
   constructor(private el: ElementRef) {
   }
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.scrollEffect();
     this.initMap();
   }
@@ -131,6 +133,7 @@ export class HomeComponent implements OnInit {
       },
     });
   }
+
   private initMap(): void {
     const myIcon = L.icon({
       iconUrl: 'myIcon.png',

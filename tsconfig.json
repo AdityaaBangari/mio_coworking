@@ -4,6 +4,8 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
+      "gsap": ["./path/to/gsap"],
+      "gsap/*": ["./path/to/gsap/*"],
       "~leaflet": ["node_modules/leaflet"]
     },
     "outDir": "./dist/out-tsc",
