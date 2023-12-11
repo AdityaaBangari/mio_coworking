@@ -30,6 +30,9 @@
       "dom"
     ]
   },
+  "files": [
+    "node_modules/gsap/types/index.d.ts"
+  ],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

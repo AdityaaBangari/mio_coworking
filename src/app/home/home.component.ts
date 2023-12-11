@@ -2,8 +2,9 @@ import {AfterViewInit, Component, ElementRef, OnInit} from '@angular/core';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 // import SplitText from 'gsap/dist/SplitText';
-// gsap.registerPlugin(SplitText);
 import * as L from 'leaflet';
+gsap.registerPlugin(ScrollTrigger);
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -41,7 +42,8 @@ export class HomeComponent implements AfterViewInit {
       scrollTrigger: {
         trigger: this.el.nativeElement.querySelector('.find_us_container1'),
         start: 'top 80%', // Adjust as needed
-        scrub: true, // Set to true for a smoother effect during scrolling
+        end: 'top 40%',
+        scrub: true, // Set to true for a smoother effect during scrolling,
       },
     });
 
@@ -51,7 +53,8 @@ export class HomeComponent implements AfterViewInit {
       duration: 1,
       scrollTrigger: {
         trigger: this.el.nativeElement.querySelector('.membership_container'),
-        start: 'top 80%', // Adjust as needed
+        start: 'top 80%', // Adjust as needed,
+        end: 'top 40%',
         scrub: true, // Set to true for a smoother effect during scrolling
       },
     });
@@ -62,7 +65,8 @@ export class HomeComponent implements AfterViewInit {
       duration: 1,
       scrollTrigger: {
         trigger: this.el.nativeElement.querySelector('.membership_container'),
-        start: 'top 80%', // Adjust as needed
+        start: 'top 80%', // Adjust as needed,
+        end: 'top 40%',
         scrub: true, // Set to true for a smoother effect during scrolling
       },
     });
@@ -141,7 +145,7 @@ export class HomeComponent implements AfterViewInit {
       // ...
     });
     // Create a map and set the initial view
-    this.map = L.map('map').setView([28.517479098394748, 77.19832845577525], 20);
+    this.map = L.map('map').setView([28.517479098394748, 77.19832845577525], 25);
 
     // Add a tile layer (e.g., OpenStreetMap)
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
