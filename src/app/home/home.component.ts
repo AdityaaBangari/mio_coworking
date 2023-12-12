@@ -16,8 +16,9 @@ export class HomeComponent implements AfterViewInit {
   }
   ngAfterViewInit(): void {
     gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.register(gsap);
     console.log('GSAP Version:', gsap.version);
-    console.log('ScrollTrigger:', gsap.registerPlugin(ScrollTrigger));
+    console.log('ScrollTrigger:', ScrollTrigger);
     this.scrollEffect();
     this.initMap();
   }
