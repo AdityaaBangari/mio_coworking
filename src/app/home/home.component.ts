@@ -1,7 +1,7 @@
 import {AfterViewInit, Component, ElementRef, OnInit} from '@angular/core';
 import * as L from 'leaflet';
 import {gsap} from "gsap";
-import {ScrollTrigger} from "gsap/ScrollTrigger";
+import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
 import {PageScrollService } from 'ngx-page-scroll-core';
 @Component({
   selector: 'app-home',
