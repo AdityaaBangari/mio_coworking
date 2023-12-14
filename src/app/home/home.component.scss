@@ -20,7 +20,15 @@
       font-family: 'Tommy', sans-serif;
       padding: 0 24px;
       border-left: 1px solid #b9beb9;
-
+      @media screen and (max-width: 576px){
+        padding: 0 20px;
+      }
+      @media screen and (max-width: 420px){
+        padding: 0 15px;
+      }
+      .nav_title{
+        cursor: pointer;
+      }
       span {
         font-weight: 300;
         font-size: 14px;

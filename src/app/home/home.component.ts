@@ -1,5 +1,6 @@
 import {AfterViewInit, Component, ElementRef, OnInit} from '@angular/core';
 import * as L from 'leaflet';
+import SplitType from 'split-type';
 // import {gsap} from "gsap";
 // import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
 // import {PageScrollService } from 'ngx-page-scroll-core';
@@ -16,8 +17,7 @@ export class HomeComponent implements AfterViewInit {
   constructor(private el: ElementRef) {
   }
   ngAfterViewInit(): void {
-    console.log('GSAP Version:', gsap.version);
-    console.log('ScrollTrigger:', ScrollTrigger);
+    this.onLandingAnimation();
     this.scrollEffect();
     this.initMap();
   }
@@ -173,5 +173,65 @@ export class HomeComponent implements AfterViewInit {
 
     // Open the URL in a new tab/window
     window.open(googleMapsUrl, '_blank');
+  }
+
+    scrollToAboutUs() {
+      gsap.to(window, {
+        duration: 1,
+        scrollTo: { y: "#introsection", offsetY: 50 }, // Adjust offsetY as needed
+      });
+    }
+
+  onLandingAnimation() {
+    const mio = this.el.nativeElement.querySelectorAll('.title');
+    const mio_sub = this.el.nativeElement.querySelectorAll('.title_2');
+    const timeline = gsap.timeline();
+
+    mio.forEach((element: any) => {
+      const ourText = new SplitType(element as HTMLElement, { types: 'chars' });
+      const chars = ourText.chars;
+
+      // Add animation to the timeline for .title
+      timeline.fromTo(
+        chars,
+        {
+          y: 25,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1.5,
+          delay: 1,
+          ease: 'power4.out',
+        },
+        '<' // Use '<' to position the animation at the start of the timeline
+      );
+    });
+
+    mio_sub.forEach((element: any) => {
+      const ourText = new SplitType(element as HTMLElement, { types: 'chars' });
+      const chars = ourText.chars;
+
+      // Add animation to the timeline for .title_2
+      timeline.fromTo(
+        chars,
+        {
+          y: 25,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1.5,
+          delay: 1,
+          ease: 'power4.out',
+        },
+        '<' // Use '<' to position the animation at the start of the timeline
+      );
+    });
+
+    // You can optionally return the timeline if you need to control it externally
+    return timeline;
   }
 }

@@ -41,7 +41,9 @@
               "node_modules/gsap/dist/gsap.js",
               "node_modules/gsap/dist/ScrollTrigger.js",
               "src/assets/gsap/gsap.min.js",
-              "src/assets/gsap/ScrollTrigger.min.js"
+              "src/assets/gsap/ScrollTrigger.min.js",
+              "src/assets/gsap/ScrollToPlugin.min.js",
+              "src/assets/gsap/TextPlugin.min.js"
             ]
           },
           "configurations": {
@@ -113,7 +115,9 @@
               "node_modules/gsap/dist/gsap.js",
               "node_modules/gsap/dist/ScrollTrigger.js",
               "src/assets/gsap/gsap.min.js",
-              "src/assets/gsap/ScrollTrigger.min.js"
+              "src/assets/gsap/ScrollTrigger.min.js",
+              "src/assets/gsap/ScrollToPlugin.min.js",
+              "src/assets/gsap/TextPlugin.min.js"
             ]
           }
         }
