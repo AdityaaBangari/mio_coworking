@@ -1,9 +1,9 @@
 import {AfterViewInit, Component, ElementRef, OnInit} from '@angular/core';
 import * as L from 'leaflet';
-import {gsap} from "gsap";
-import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
-import {PageScrollService } from 'ngx-page-scroll-core';
-gsap.registerPlugin(ScrollTrigger);
+// import {gsap} from "gsap";
+// import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
+// import {PageScrollService } from 'ngx-page-scroll-core';
+declare var gsap: any;
 
 @Component({
   selector: 'app-home',
@@ -13,8 +13,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export class HomeComponent implements AfterViewInit {
   private map: L.Map | undefined;
-  constructor(private el: ElementRef,
-              private pageScrollService: PageScrollService) {
+  constructor(private el: ElementRef) {
   }
   ngAfterViewInit(): void {
     console.log('GSAP Version:', gsap.version);
@@ -174,25 +173,5 @@ export class HomeComponent implements AfterViewInit {
 
     // Open the URL in a new tab/window
     window.open(googleMapsUrl, '_blank');
-  }
-
-  scrollToSection(sectionId: string): void {
-    const targetElement = this.el.nativeElement.querySelector(`#${sectionId}`);
-    console.log(sectionId);
-
-    if (targetElement) {
-      const parentElement = targetElement.parentNode;
-
-      if (parentElement) {
-        this.pageScrollService.scroll({
-          document: this.el.nativeElement,
-          scrollTarget: targetElement,
-        });
-      } else {
-        console.error('Parent element is undefined for target element:', targetElement);
-      }
-    } else {
-      console.error('Target element is undefined for section ID:', sectionId);
-    }
   }
 }

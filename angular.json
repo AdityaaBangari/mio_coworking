@@ -39,7 +39,9 @@
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
               "node_modules/gsap/dist/gsap.js",
-              "node_modules/gsap/dist/ScrollTrigger.js"
+              "node_modules/gsap/dist/ScrollTrigger.js",
+              "src/assets/gsap/gsap.min.js",
+              "src/assets/gsap/ScrollTrigger.min.js"
             ]
           },
           "configurations": {
@@ -109,7 +111,9 @@
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
               "node_modules/gsap/dist/gsap.js",
-              "node_modules/gsap/dist/ScrollTrigger.js"
+              "node_modules/gsap/dist/ScrollTrigger.js",
+              "src/assets/gsap/gsap.min.js",
+              "src/assets/gsap/ScrollTrigger.min.js"
             ]
           }
         }
