@@ -3,6 +3,8 @@ import * as L from 'leaflet';
 import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
 import {PageScrollService } from 'ngx-page-scroll-core';
+gsap.registerPlugin(ScrollTrigger);
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -15,8 +17,6 @@ export class HomeComponent implements AfterViewInit {
               private pageScrollService: PageScrollService) {
   }
   ngAfterViewInit(): void {
-    gsap.registerPlugin(ScrollTrigger);
-    ScrollTrigger.register(gsap);
     console.log('GSAP Version:', gsap.version);
     console.log('ScrollTrigger:', ScrollTrigger);
     this.scrollEffect();
