@@ -21,7 +21,7 @@ export class HomeComponent implements AfterViewInit {
     this.onLandingAnimation();
     this.scrollEffect();
     this.initMap();
-    this.playVideo();
+    // this.playVideo();
   }
 
   scrollEffect() {
@@ -237,9 +237,9 @@ export class HomeComponent implements AfterViewInit {
     return timeline;
   }
 
-  playVideo() {
-    if (this.videoPlayer) {
-      this.videoPlayer.nativeElement.play();
-    }
-  }
+  // playVideo() {
+  //   if (this.videoPlayer) {
+  //     this.videoPlayer.nativeElement.play();
+  //   }
+  // }
 }

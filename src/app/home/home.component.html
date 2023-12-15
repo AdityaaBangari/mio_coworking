@@ -30,10 +30,9 @@
       </div>
     </div>
     <div class="col-12 col-md-6 px-0 main_col">
-      <div class="video_container" (click)="playVideo()">
-        <video class="video-cover" #videoPlayer autoplay muted loop playsinline>
-          <source src="./assets/video/home.mp4"
-                  type="video/mp4">
+      <div class="video_container">
+        <video class="video-cover" #videoPlayer [autoplay]="true" [muted]="true" [loop]="true">
+          <source type="video/mp4" src="./assets/video/home.mp4">
         </video>
       </div>
     </div>
