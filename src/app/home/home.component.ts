@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, OnInit} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import * as L from 'leaflet';
 import SplitType from 'split-type';
 // import {gsap} from "gsap";
@@ -13,6 +13,7 @@ declare var gsap: any;
 })
 
 export class HomeComponent implements AfterViewInit {
+  @ViewChild('videoPlayer') videoPlayer: any;
   private map: L.Map | undefined;
   constructor(private el: ElementRef) {
   }
@@ -20,6 +21,7 @@ export class HomeComponent implements AfterViewInit {
     this.onLandingAnimation();
     this.scrollEffect();
     this.initMap();
+    this.playVideo();
   }
 
   scrollEffect() {
@@ -233,5 +235,11 @@ export class HomeComponent implements AfterViewInit {
 
     // You can optionally return the timeline if you need to control it externally
     return timeline;
+  }
+
+  playVideo() {
+    if (this.videoPlayer) {
+      this.videoPlayer.nativeElement.play();
+    }
   }
 }
