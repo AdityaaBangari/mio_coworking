@@ -45,9 +45,38 @@
 .main {
   background: #faf0e6;
   color: #2d2d2d;
+  position: relative;
+  overflow-x: hidden;
 
+  .plant-1{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 30rem;
+    opacity: 60%;
+  }
+  .lady{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 20rem;
+    opacity: 85%;
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+      opacity: 65%;
+    }
+  }
+
+  .plant-2{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 30rem;
+    opacity: 55%;
+  }
   .main_col {
     min-height: 350px;
+    position: relative;
+    overflow-x: hidden;
     @media (min-width: 768px) {
       min-height: calc(100vh - 160px);
 
@@ -110,11 +139,44 @@
 .intro-section {
   background: #FDFBF7;
   color: #2d2d2d;
-  padding-bottom: 80px;
-  padding-top: 80px;
+  overflow-x: hidden;
+  position: relative;
 
+  .intro_section_imageright{
+    position: absolute;
+    height: 30rem;
+    right: -0.9rem;
+    bottom: 0;
+    @media screen and (max-width: 992px){
+      opacity: 45%;
+    }
+    @media screen and (max-width: 1200px){
+      opacity: 55%;
+    }
+    @media screen and (max-width: 576px){
+      opacity: 10%;
+    }
+
+  }
+  .intro_section_imageleft{
+    position: absolute;
+    height: 30rem;
+    bottom: 0;
+    left: -0.9rem;
+
+    @media screen and (max-width: 992px){
+      opacity: 45%;
+    }
+    @media screen and (min-width: 992px) and (max-width: 1200px){
+      opacity: 55%;
+    }
+    @media screen and (max-width: 576px){
+      opacity: 10%;
+    }
+
+  }
   .intro-section_container {
-    padding: 40px 0;
+    padding: 120px 0;
 
     .intro-content {
       font-size: 20px;
@@ -331,8 +393,43 @@
 
 .our_standard {
   color: #2D2D2D;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  position: relative;
+  overflow: hidden;
+
+  .our_standard_imageright{
+    position: absolute;
+    height: 30rem;
+    right: -0.9rem;
+    bottom: 0;
+    @media screen and (max-width: 992px){
+      opacity: 45%;
+    }
+    @media screen and (max-width: 1200px){
+      opacity: 55%;
+    }
+    @media screen and (max-width: 576px){
+      opacity: 10%;
+    }
+
+  }
+  .our_standard_imageleft{
+    position: absolute;
+    height: 30rem;
+    bottom: 0;
+    left: -0.9rem;
+
+    @media screen and (max-width: 992px){
+      opacity: 45%;
+    }
+    @media screen and (min-width: 992px) and (max-width: 1200px){
+      opacity: 55%;
+    }
+    @media screen and (max-width: 576px){
+      opacity: 10%;
+    }
+
+  }
+
   @media (min-width: 768px) {
     padding-top: 80px !important;
     padding-bottom: 80px !important;
@@ -351,6 +448,10 @@
     }
     @media (min-width: 768px) {
       padding: 40px 0;
+      //width: 75%;
+    }
+    @media (max-width: 768px) {
+      padding: 24px 0;
       //width: 75%;
     }
   }
