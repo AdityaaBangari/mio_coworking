@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
 import * as L from 'leaflet';
 import SplitType from 'split-type';
 // import {gsap} from "gsap";
@@ -15,7 +15,8 @@ declare var gsap: any;
 export class HomeComponent implements AfterViewInit {
   @ViewChild('videoPlayer') videoPlayer: any;
   private map: L.Map | undefined;
-  constructor(private el: ElementRef) {
+  constructor(private el: ElementRef,
+              private renderer: Renderer2) {
   }
   ngAfterViewInit(): void {
     this.onLandingAnimation();
@@ -33,6 +34,28 @@ export class HomeComponent implements AfterViewInit {
         scrub: true, // Set to true for a smoother effect during scrolling
       },
       y: 100, // Initial position below the viewport
+      opacity: 0,
+      duration: 1,
+    });
+    gsap.from('.intro_section_imageright', {
+      scrollTrigger: {
+        trigger: this.el.nativeElement.querySelector('.intro-section_container'),
+        start: 'top 80%', // Adjust as needed
+        end: 'top 40%',
+        scrub: true, // Set to true for a smoother effect during scrolling
+      },
+      x: 100, // Initial position below the viewport
+      opacity: 0,
+      duration: 1,
+    });
+    gsap.from('.intro_section_imageleft', {
+      scrollTrigger: {
+        trigger: this.el.nativeElement.querySelector('.intro-section_container'),
+        start: 'top 80%', // Adjust as needed
+        end: 'top 40%',
+        scrub: true, // Set to true for a smoother effect during scrolling
+      },
+      x: -100, // Initial position below the viewport
       opacity: 0,
       duration: 1,
     });
@@ -128,6 +151,28 @@ export class HomeComponent implements AfterViewInit {
       opacity: 0,
       duration: 1
     });
+    gsap.from('.our_standard_imageleft', {
+      scrollTrigger: {
+        trigger: this.el.nativeElement.querySelector('.our_standard_container'),
+        start: 'top 80%',
+        end: 'top 40%', // Adjust as needed// Adjust as needed
+        scrub: true, // Set to true for a smoother effect during scrolling
+      },
+      x: -100, // Initial position below the viewport
+      opacity: 0,
+      duration: 1
+    });
+    gsap.from('.our_standard_imageright', {
+      scrollTrigger: {
+        trigger: this.el.nativeElement.querySelector('.our_standard_container'),
+        start: 'top 80%',
+        end: 'top 40%', // Adjust as needed// Adjust as needed
+        scrub: true, // Set to true for a smoother effect during scrolling
+      },
+      x: 100, // Initial position below the viewport
+      opacity: 0,
+      duration: 1
+    });
     gsap.from('.our_standard_item_heading', {
       scrollTrigger: {
         trigger: this.el.nativeElement.querySelector('.our_standard_item_container'),
@@ -183,12 +228,46 @@ export class HomeComponent implements AfterViewInit {
         scrollTo: { y: "#introsection", offsetY: 50 }, // Adjust offsetY as needed
       });
     }
-
+  scrollToFooter() {
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: { y: "#footer", offsetY: 50 }, // Adjust offsetY as needed
+    });
+  }
   onLandingAnimation() {
     const mio = this.el.nativeElement.querySelectorAll('.title');
     const mio_sub = this.el.nativeElement.querySelectorAll('.title_2');
     const timeline = gsap.timeline();
-
+    timeline.from('.mio_nav', {
+      x: 1000, // Start off the screen to the left
+      opacity: 0, // Initially invisible
+      duration:1.5,
+      ease: "expo.inOut",
+    }, '<')
+    timeline.from('.main', {
+      x: -1000, // Start off the screen to the left
+      opacity: 0, // Initially invisible
+      duration:1.5,
+      ease: "expo.inOut",
+    }, '<')
+    timeline.from('.plant-2', {
+      x: 500, // Start off the screen to the left
+      opacity: 0, // Initially invisible
+      duration:.3,
+      ease: "expo.inOut",
+    }, '>')
+    timeline.from('.plant-1', {
+      x: -500, // Start off the screen to the left
+      opacity: 0, // Initially invisible
+      duration:.3,
+      ease: "expo.inOut",
+    }, '>')
+    timeline.from('.lady', {
+      x: -500, // Start off the screen to the left
+      opacity: 0, // Initially invisible
+      duration:1,
+      ease: "expo.inOut",
+    })
     mio.forEach((element: any) => {
       const ourText = new SplitType(element as HTMLElement, { types: 'chars' });
       const chars = ourText.chars;
@@ -204,10 +283,9 @@ export class HomeComponent implements AfterViewInit {
           y: 0,
           opacity: 1,
           duration: 1.5,
-          delay: 1,
+          // delay: .2,
           ease: 'power4.out',
-        },
-        '<' // Use '<' to position the animation at the start of the timeline
+        } // Use '<' to position the animation at the start of the timeline
       );
     });
 
@@ -225,11 +303,9 @@ export class HomeComponent implements AfterViewInit {
         {
           y: 0,
           opacity: 1,
-          duration: 1.5,
-          delay: 1,
+          duration: 1.2,
           ease: 'power4.out',
-        },
-        '<' // Use '<' to position the animation at the start of the timeline
+        } // Use '<' to position the animation at the start of the timeline
       );
     });
 
