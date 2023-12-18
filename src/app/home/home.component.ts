@@ -15,10 +15,13 @@ declare var gsap: any;
 export class HomeComponent implements AfterViewInit {
   @ViewChild('videoPlayer') videoPlayer: any;
   private map: L.Map | undefined;
+
   constructor(private el: ElementRef,
               private renderer: Renderer2) {
   }
+
   ngAfterViewInit(): void {
+    console.log('Website made with passion by Aditya Bangari');
     this.onLandingAnimation();
     this.scrollEffect();
     this.initMap();
@@ -186,11 +189,15 @@ export class HomeComponent implements AfterViewInit {
     });
   }
 
-   initMap(): void {
-    const myIcon = L.icon({
-      iconUrl: 'myIcon.png',
-      // ...
+  initMap(): void {
+    const markerIcon = L.icon({
+      iconUrl: '/assets/images/marker-icon-2x.png',
+      iconSize: [25, 41], // Adjust the size based on your icon
+      iconAnchor: [12, 41], // Adjust the anchor point based on your icon
+      popupAnchor: [1, -34], // Adjust the popup anchor point based on your icon
+      // Other options...
     });
+
     // Create a map and set the initial view
     this.map = L.map('map').setView([28.517479098394748, 77.19832845577525], 25);
 
@@ -199,8 +206,8 @@ export class HomeComponent implements AfterViewInit {
       attribution: 'OpenStreetMap',
     }).addTo(this.map);
 
-    // Add a marker
-    const marker = L.marker([28.517479098394748, 77.19832845577525]).addTo(this.map)
+    // Add a marker with the custom icon
+    const marker = L.marker([28.517479098394748, 77.19832845577525], { icon: markerIcon }).addTo(this.map)
       .bindPopup('Mio Coworks')
       .openPopup();
 
@@ -213,7 +220,7 @@ export class HomeComponent implements AfterViewInit {
     });
   }
 
-   redirectToGoogleMaps(lat: number, lng: number): void {
+  redirectToGoogleMaps(lat: number, lng: number): void {
     // Construct the Google Maps URL with the clicked coordinates
     const googleMapsUrl =
       'https://www.google.com/maps/place/Mio+Coworks/@28.5174985,77.198358,20z/data=!4m14!1m7!3m6!1s0x390ce18d9bffd5a7:0x1d047cd16cc6fe00!2sMio+Coworks!8m2!3d28.5174594!4d77.1983305!16s%2Fg%2F11vllzbb6h!3m5!1s0x390ce18d9bffd5a7:0x1d047cd16cc6fe00!8m2!3d28.5174594!4d77.1983305!16s%2Fg%2F11vllzbb6h?entry=ttu';
@@ -222,18 +229,20 @@ export class HomeComponent implements AfterViewInit {
     window.open(googleMapsUrl, '_blank');
   }
 
-    scrollToAboutUs() {
-      gsap.to(window, {
-        duration: 1,
-        scrollTo: { y: "#introsection", offsetY: 50 }, // Adjust offsetY as needed
-      });
-    }
+  scrollToAboutUs() {
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: {y: "#introsection", offsetY: 50}, // Adjust offsetY as needed
+    });
+  }
+
   scrollToFooter() {
     gsap.to(window, {
       duration: 1,
-      scrollTo: { y: "#footer", offsetY: 50 }, // Adjust offsetY as needed
+      scrollTo: {y: "#footer", offsetY: 50}, // Adjust offsetY as needed
     });
   }
+
   onLandingAnimation() {
     const mio = this.el.nativeElement.querySelectorAll('.title');
     const mio_sub = this.el.nativeElement.querySelectorAll('.title_2');
@@ -241,35 +250,35 @@ export class HomeComponent implements AfterViewInit {
     timeline.from('.mio_nav', {
       x: 1000, // Start off the screen to the left
       opacity: 0, // Initially invisible
-      duration:1.5,
+      duration: 1.5,
       ease: "expo.inOut",
     }, '<')
     timeline.from('.main', {
       x: -1000, // Start off the screen to the left
       opacity: 0, // Initially invisible
-      duration:1.5,
+      duration: 1.5,
       ease: "expo.inOut",
     }, '<')
     timeline.from('.plant-2', {
       x: 500, // Start off the screen to the left
       // opacity: 0, // Initially invisible
-      duration:.3,
+      duration: .3,
       ease: "expo.inOut",
     }, '>')
     timeline.from('.plant-1', {
       x: -500, // Start off the screen to the left
       // opacity: 0, // Initially invisible
-      duration:.3,
+      duration: .3,
       ease: "expo.inOut",
     }, '>')
     timeline.from('.lady', {
       x: -500, // Start off the screen to the left
       opacity: 0, // Initially invisible
-      duration:1,
+      duration: 1,
       ease: "expo.inOut",
     })
     mio.forEach((element: any) => {
-      const ourText = new SplitType(element as HTMLElement, { types: 'chars' });
+      const ourText = new SplitType(element as HTMLElement, {types: 'chars'});
       const chars = ourText.chars;
 
       // Add animation to the timeline for .title
@@ -290,7 +299,7 @@ export class HomeComponent implements AfterViewInit {
     });
 
     mio_sub.forEach((element: any) => {
-      const ourText = new SplitType(element as HTMLElement, { types: 'chars' });
+      const ourText = new SplitType(element as HTMLElement, {types: 'chars'});
       const chars = ourText.chars;
 
       // Add animation to the timeline for .title_2

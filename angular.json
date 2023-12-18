@@ -28,7 +28,9 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/images/marker-icon.png",
+              "src/assets/images/marker-shadow.png"
             ],
             "styles": [
               "src/styles.scss",
@@ -36,6 +38,7 @@
               "node_modules/leaflet/dist/leaflet.css"
             ],
             "scripts": [
+              "node_modules/leaflet/dist/leaflet.js",
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
               "node_modules/gsap/dist/gsap.js",
@@ -51,8 +54,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "900kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "1.5mb",
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -102,7 +105,9 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/images/marker-icon.png",
+              "src/assets/images/marker-shadow.png"
             ],
             "styles": [
               "src/styles.scss",
@@ -110,6 +115,7 @@
               "node_modules/leaflet/dist/leaflet.css"
             ],
             "scripts": [
+              "node_modules/leaflet/dist/leaflet.js",
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
               "node_modules/gsap/dist/gsap.js",

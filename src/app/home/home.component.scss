@@ -72,11 +72,12 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 20rem;
+    height: 16rem;
     opacity: 85%;
     @media screen and (min-width: 768px) and (max-width: 1200px) {
       opacity: 75%;
       z-index: -3;
+      //height: 20rem;
     }
   }
   .change-color{
@@ -224,7 +225,7 @@
 
       .intro-section_bold {
         font-family: 'EB Garamond', serif;
-        font-size: 22px !important;
+        font-size: 22px ;
         @media (min-width: 992px) {
           font-size: 33px;
           line-height: 50px;
