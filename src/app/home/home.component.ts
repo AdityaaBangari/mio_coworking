@@ -45,7 +45,7 @@ export class HomeComponent implements AfterViewInit {
         scrub: true, // Set to true for a smoother effect during scrolling
       },
       x: 100, // Initial position below the viewport
-      opacity: 0,
+      // opacity: 0,
       duration: 1,
     });
     gsap.from('.intro_section_imageleft', {
@@ -56,7 +56,7 @@ export class HomeComponent implements AfterViewInit {
         scrub: true, // Set to true for a smoother effect during scrolling
       },
       x: -100, // Initial position below the viewport
-      opacity: 0,
+      // opacity: 0,
       duration: 1,
     });
 
@@ -159,7 +159,7 @@ export class HomeComponent implements AfterViewInit {
         scrub: true, // Set to true for a smoother effect during scrolling
       },
       x: -100, // Initial position below the viewport
-      opacity: 0,
+      // opacity: 0,
       duration: 1
     });
     gsap.from('.our_standard_imageright', {
@@ -170,7 +170,7 @@ export class HomeComponent implements AfterViewInit {
         scrub: true, // Set to true for a smoother effect during scrolling
       },
       x: 100, // Initial position below the viewport
-      opacity: 0,
+      // opacity: 0,
       duration: 1
     });
     gsap.from('.our_standard_item_heading', {
@@ -252,13 +252,13 @@ export class HomeComponent implements AfterViewInit {
     }, '<')
     timeline.from('.plant-2', {
       x: 500, // Start off the screen to the left
-      opacity: 0, // Initially invisible
+      // opacity: 0, // Initially invisible
       duration:.3,
       ease: "expo.inOut",
     }, '>')
     timeline.from('.plant-1', {
       x: -500, // Start off the screen to the left
-      opacity: 0, // Initially invisible
+      // opacity: 0, // Initially invisible
       duration:.3,
       ease: "expo.inOut",
     }, '>')
