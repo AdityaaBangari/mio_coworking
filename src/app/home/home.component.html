@@ -76,7 +76,7 @@
         </div>
         <div class="row mt-2" >
           <div class="col-12 pl-sm-0 find_us_container2">
-            <div id="map" class="fade-in_find_us1" style="height: 400px;"></div>
+            <div id="map" class="fade-in_find_us1 map" style="height: 400px;"></div>
           </div>
 
         </div>
@@ -540,4 +540,12 @@
       </div>
     </div>
   </div>
+  <div class="credit text-right">
+    <h6 [ngClass]="{'hide': !showCredit,'show': showCredit}">Made with passion by <a [ngClass]="{'hide': !showCredit,'show': showCredit}" href="https://www.instagram.com/aditya.iwnl/" target="_blank">Aditya Bangari</a>
+    </h6>
+    <span [ngClass]="{'hide': showCredit,'show': !showCredit}" (click)="toggleVisibility()" #iconRef>ツ</span>
+
+  </div>
 </div>
+
+

@@ -15,7 +15,7 @@ declare var gsap: any;
 export class HomeComponent implements AfterViewInit {
   @ViewChild('videoPlayer') videoPlayer: any;
   private map: L.Map | undefined;
-
+  showCredit = false;
   constructor(private el: ElementRef,
               private renderer: Renderer2) {
   }
@@ -327,4 +327,12 @@ export class HomeComponent implements AfterViewInit {
   //     this.videoPlayer.nativeElement.play();
   //   }
   // }
+  toggleVisibility() {
+    this.showCredit = true;
+
+    // Set a timer to reset showCredit to false after 6 seconds
+    setTimeout(() => {
+      this.showCredit = false;
+    }, 6000); // 6000 milliseconds = 6 seconds
+  }
 }

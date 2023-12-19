@@ -12,6 +12,7 @@
       font-family: 'EB Garamond', serif;
       font-weight: 700;
       font-size: 20px;
+
     }
 
     .nav_link_container {
@@ -35,6 +36,9 @@
 
         &.dot {
           color: grey;
+        }
+        @media screen and (max-width: 410px){
+          font-size: 12px;
         }
       }
 
@@ -147,13 +151,25 @@
         font-size: 48px;
         line-height: 56px;
         font-family: 'EB Garamond', serif;
+
+
+        @media screen and (max-width: 576px) {
+          font-size: 45px;
+        }
+        @media screen and (max-width: 409px) {
+          font-size: 40px;
+        }
         @media screen and (min-width: 768px) and (max-width: 992px) {
+          font-size: 42px; /* Add your desired font-size value */
+          line-height: 1.5; /* Add your desired line-height value */
           z-index: 1;
         }
+
         @media (min-width: 1025px) {
           font-size: 56px;
           line-height: 64px;
         }
+
       }
 
     }
@@ -217,19 +233,25 @@
       font-size: 19px;
       line-height: 48px;
       font-weight: 300;
+      @media screen and (max-width: 992px){
+        line-height: 40px;
+      }
       @media (min-width: 992px) {
         font-size: 30px;
-        line-height: 50px;
+        line-height: 45px;
         text-align: justify;
       }
 
       .intro-section_bold {
         font-family: 'EB Garamond', serif;
         font-size: 22px ;
+        @media screen and (max-width: 992px){
+          line-height: 40px;
+        }
         @media (min-width: 992px) {
+          text-align: justify;
           font-size: 33px;
           line-height: 50px;
-          text-align: justify;
         }
       }
     }
@@ -246,6 +268,16 @@
     padding-bottom: 80px !important;
   }
 
+  .map{
+    @media screen and (max-width: 576px){
+      height: 250px;
+      width: auto;
+    }
+    @media screen and (min-width: 576px){
+      height: 400px;
+      width: auto;
+    }
+  }
   .location_heading {
     font-family: 'EB Garamond', serif;
     font-size: 40px;
@@ -289,23 +321,62 @@
   .membership_heading_1 {
     font-weight: 300;
     font-family: 'Tommy', sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     line-height: 40px;
-    padding: 0 24px 24px;
-    text-align: justify;
-    @media (min-width: 1025px) {
-      line-height: 48px;
+    padding: 0 15px ;
+
+    @media (max-width: 576px) {
+      padding: 0 15px;
+      line-height: 40px;
+      //text-align: justify;
     }
-    @media (min-width: 768px) {
-      padding: 40px 0;
+    @media (min-width: 576px) and (max-width: 768px){
+      //padding: 40px 0;
+      font-size: 1.3rem;
+      padding: 0;
+      //text-align: justify;
       //width: 75%;
+    }
+    @media (min-width: 768px) and (max-width: 992px){
+      padding: 40px 0;
+      font-size: 1.5rem;
+      text-align: justify;
+      //width: 75%;
+    }
+    @media screen and (min-width: 992px){
+      padding: 40px 0;
+      font-size: 1.8rem;
+      text-align: justify;
     }
   }
 
   .membership_heading_2 {
     font-family: 'EB Garamond', serif;
     font-weight: 400;
-    font-size: 38px;
+    font-size: 1.5rem;
+    line-height: 40px;
+    @media (max-width: 576px) {
+      line-height: 40px;
+      //text-align: justify;
+    }
+    @media (min-width: 576px) and (max-width: 768px){
+      //padding: 40px 0;
+      font-size: 1.5rem;
+      padding: 0;
+      //text-align: justify;
+      //width: 75%;
+    }
+    @media (min-width: 768px) and (max-width: 992px){
+      padding: 40px 0;
+      font-size: 1.8rem;
+      //text-align: justify;
+      //width: 75%;
+    }
+    @media screen and (min-width: 992px){
+      padding: 40px 0;
+      font-size: 2.2rem;
+      text-align: justify;
+    }
   }
 
   .membership_heading {
@@ -342,23 +413,61 @@
   .approach_1 {
     font-weight: 300;
     font-family: 'Tommy', sans-serif;
-    font-size: 32px;
     line-height: 40px;
     padding: 0 24px 24px;
-    @media (min-width: 1025px) {
-      font-size: 35px;
-      line-height: 48px;
+
+    @media (max-width: 576px) {
+      font-size: 1.4rem;
+      padding: 0 15px;
+      line-height: 40px;
+      //text-align: justify;
     }
-    @media (min-width: 768px) {
-      padding: 40px 0;
+    @media (min-width: 576px) and (max-width: 768px){
+      //padding: 40px 0;
+      font-size: 1.3rem;
+      padding: 0;
+      //text-align: justify;
       //width: 75%;
+    }
+    @media (min-width: 768px) and (max-width: 992px){
+      padding: 40px 0;
+      font-size: 1.5rem;
+      text-align: justify;
+      //width: 75%;
+    }
+    @media screen and (min-width: 992px){
+      padding: 40px 0;
+      font-size: 1.8rem;
+      text-align: justify;
     }
   }
 
   .approach_2 {
     font-family: 'EB Garamond', serif;
     font-weight: 400;
-    font-size: 45px;
+    @media (max-width: 576px) {
+      font-size: 1.6rem;
+      line-height: 40px;
+      //text-align: justify;
+    }
+    @media (min-width: 576px) and (max-width: 768px){
+      //padding: 40px 0;
+      font-size: 1.5rem;
+      padding: 0;
+      //text-align: justify;
+      //width: 75%;
+    }
+    @media (min-width: 768px) and (max-width: 992px){
+      padding: 40px 0;
+      font-size: 1.8rem;
+      text-align: justify;
+      //width: 75%;
+    }
+    @media screen and (min-width: 992px){
+      padding: 40px 0;
+      font-size: 2.2rem;
+      text-align: justify;
+    }
   }
 
   .carousel-control-prev {
@@ -515,6 +624,7 @@
 }
 
 .footer {
+  position: relative;
   background-color: #2d2d2d;
   width: 100%;
   //padding: 0 0 24px;
@@ -550,5 +660,60 @@
     display: block;
     outline-offset: 1px !important;
     font-size: 14px;
+  }
+}
+.credit{
+  display: flex;
+  align-items: center;
+  justify-content: right ;
+  position: absolute;
+  width: 320px;
+  min-width: 150px;
+  background: #2d2d2d;
+  bottom: 0;
+  right: 0;
+  font-size: 1.1rem;
+  letter-spacing: 0.8px;
+  font-family: 'Tommy', serif;;
+
+  span {
+    cursor: pointer;
+    position: relative;
+    font-size: 0.9rem;
+    &.hide {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+    &.show {
+      opacity: 1;
+      transition:  opacity 0.5s ease-in-out;
+    }
+  };
+  h6{
+    &.hide {
+      opacity: 0;
+      position: absolute;
+      right: 0;
+      cursor: default;
+      transition: opacity 0.5s ease-in-out;
+    }
+    &.show {
+      opacity: 1;
+      position: absolute;
+      right: 0;
+      cursor: none;
+      transition:  opacity 0.5s ease-in-out;
+    }
+  };
+  a {
+    padding-right: 5px;
+    font-family: 'Tommy', sans-serif;;
+    color: indianred;
+    &.hide {
+      cursor: default;
+    }
+    &.show {
+      cursor: pointer;
+    }
   }
 }
