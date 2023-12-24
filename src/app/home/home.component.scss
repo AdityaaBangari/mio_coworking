@@ -233,22 +233,33 @@
       font-size: 19px;
       line-height: 48px;
       font-weight: 300;
-      @media screen and (max-width: 992px){
+      @media (max-width: 992px) {
+       line-height: 35px;
+      }
+      @media screen and (min-width: 576px) and (max-width: 768px) {
+        line-height: 35px;
+      }
+      @media screen and (min-width: 768px) and (max-width: 992px){
         line-height: 40px;
       }
       @media (min-width: 992px) {
         font-size: 30px;
-        line-height: 45px;
-        text-align: justify;
       }
-
       .intro-section_bold {
         font-family: 'EB Garamond', serif;
         font-size: 22px ;
-        @media screen and (max-width: 992px){
+        @media screen and (max-width: 576px) {
+          font-family: 'Tommy', sans-serif;
+          line-height: 35px;
+          font-size:  19px;
+          font-weight: bold;
+        }
+        @media screen and (min-width: 576px) and (max-width: 992px){
+          font-family: 'EB Garamond', serif;
           line-height: 40px;
         }
         @media (min-width: 992px) {
+          font-family: 'EB Garamond', serif;
           text-align: justify;
           font-size: 33px;
           line-height: 50px;
@@ -327,7 +338,8 @@
 
     @media (max-width: 576px) {
       padding: 0 15px;
-      line-height: 40px;
+      line-height: 35px;
+      font-size: 1.3rem;
       //text-align: justify;
     }
     @media (min-width: 576px) and (max-width: 768px){
@@ -356,7 +368,10 @@
     font-size: 1.5rem;
     line-height: 40px;
     @media (max-width: 576px) {
-      line-height: 40px;
+      line-height: 35px;
+      font-family: 'Tommy', sans-serif;
+      font-size: 1.3rem;
+      font-weight: bold;
       //text-align: justify;
     }
     @media (min-width: 576px) and (max-width: 768px){
@@ -419,7 +434,7 @@
     @media (max-width: 576px) {
       font-size: 1.4rem;
       padding: 0 15px;
-      line-height: 40px;
+      line-height: 35px;
       //text-align: justify;
     }
     @media (min-width: 576px) and (max-width: 768px){
@@ -446,8 +461,10 @@
     font-family: 'EB Garamond', serif;
     font-weight: 400;
     @media (max-width: 576px) {
-      font-size: 1.6rem;
-      line-height: 40px;
+      font-size: 1.4rem;
+      line-height: 35px;
+      font-family: 'Tommy', sans-serif;
+      font-weight: bold;
       //text-align: justify;
     }
     @media (min-width: 576px) and (max-width: 768px){
