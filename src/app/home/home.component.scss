@@ -230,7 +230,7 @@
     padding: 120px 0;
 
     .intro-content {
-      font-size: 19px;
+      font-size: 22px;
       line-height: 48px;
       font-weight: 300;
       @media (max-width: 992px) {
@@ -251,7 +251,7 @@
         @media screen and (max-width: 576px) {
           font-family: 'Tommy', sans-serif;
           line-height: 35px;
-          font-size:  19px;
+          font-size:  21px;
           font-weight: bold;
         }
         @media screen and (min-width: 576px) and (max-width: 992px){
@@ -330,75 +330,58 @@
   }
 
   .membership_heading_1 {
+    font-size: 22px;
+    line-height: 48px;
     font-weight: 300;
-    font-family: 'Tommy', sans-serif;
-    font-size: 1.3rem;
-    line-height: 40px;
     padding: 0 15px ;
-
-    @media (max-width: 576px) {
-      padding: 0 15px;
+    @media (max-width: 992px) {
       line-height: 35px;
-      font-size: 1.3rem;
-      //text-align: justify;
     }
-    @media (min-width: 576px) and (max-width: 768px){
-      //padding: 40px 0;
-      font-size: 1.3rem;
-      padding: 0;
-      //text-align: justify;
-      //width: 75%;
+    @media screen and (min-width: 576px) and (max-width: 768px) {
+      line-height: 35px;
     }
-    @media (min-width: 768px) and (max-width: 992px){
-      padding: 40px 0;
-      font-size: 1.5rem;
-      text-align: justify;
-      //width: 75%;
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+      line-height: 40px;
     }
-    @media screen and (min-width: 992px){
-      padding: 40px 0;
-      font-size: 1.8rem;
-      text-align: justify;
+    @media (min-width: 992px) {
+      font-size: 30px;
     }
+
+    .membership_heading_2 {
+      font-family: 'EB Garamond', serif;
+      font-size: 22px;
+      @media screen and (max-width: 576px) {
+        font-family: 'Tommy', sans-serif;
+        line-height: 35px;
+        font-size: 21px;
+        font-weight: bold;
+      }
+      @media screen and (min-width: 576px) and (max-width: 992px) {
+        font-family: 'EB Garamond', serif;
+        line-height: 40px;
+      }
+      @media (min-width: 992px) {
+        font-family: 'EB Garamond', serif;
+        text-align: justify;
+        font-size: 33px;
+        line-height: 50px;
+      }
+    }
+
   }
 
-  .membership_heading_2 {
-    font-family: 'EB Garamond', serif;
-    font-weight: 400;
-    font-size: 1.5rem;
-    line-height: 40px;
-    @media (max-width: 576px) {
-      line-height: 35px;
-      font-family: 'Tommy', sans-serif;
-      font-size: 1.3rem;
-      font-weight: bold;
-      //text-align: justify;
-    }
-    @media (min-width: 576px) and (max-width: 768px){
-      //padding: 40px 0;
-      font-size: 1.5rem;
-      padding: 0;
-      //text-align: justify;
-      //width: 75%;
-    }
-    @media (min-width: 768px) and (max-width: 992px){
-      padding: 40px 0;
-      font-size: 1.8rem;
-      //text-align: justify;
-      //width: 75%;
-    }
-    @media screen and (min-width: 992px){
-      padding: 40px 0;
-      font-size: 2.2rem;
-      text-align: justify;
-    }
+  .membership_item_image {
+    border-radius: 10px;
   }
-
   .membership_heading {
     font-size: 24px;
     line-height: 32px;
     font-family: 'EB Garamond', serif;
     font-weight: 500;
+    @media screen and (max-width: 576px) {
+      font-size: 26px;
+      font-family: 'EB Garamond', serif;
+    }
     @media (min-width: 1025px) {
       font-size: 24px;
       line-height: 32px;
@@ -412,9 +395,13 @@
     font-size: 0.9rem;
     line-height: 24px;
     //opacity: 0.8;
+
+    @media screen and (max-width: 576px) {
+      font-size: 1rem;
+      font-weight: 500;
+    }
   }
 }
-
 .approach {
   color: #2D2D2D;
   background-color: #faf0e6;
@@ -425,66 +412,50 @@
     padding-bottom: 80px !important;
   }
 
-  .approach_1 {
-    font-weight: 300;
-    font-family: 'Tommy', sans-serif;
-    line-height: 40px;
-    padding: 0 24px 24px;
+  .membership_heading_1 {
 
-    @media (max-width: 576px) {
-      font-size: 1.4rem;
-      padding: 0 15px;
+
+
+
+  }
+  .approach_1 {
+    font-size: 22px;
+    line-height: 48px;
+    font-weight: 300;
+    padding: 0 15px ;
+    @media (max-width: 992px) {
       line-height: 35px;
-      //text-align: justify;
     }
-    @media (min-width: 576px) and (max-width: 768px){
-      //padding: 40px 0;
-      font-size: 1.3rem;
-      padding: 0;
-      //text-align: justify;
-      //width: 75%;
+    @media screen and (min-width: 576px) and (max-width: 768px) {
+      line-height: 35px;
     }
-    @media (min-width: 768px) and (max-width: 992px){
-      padding: 40px 0;
-      font-size: 1.5rem;
-      text-align: justify;
-      //width: 75%;
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+      line-height: 40px;
     }
-    @media screen and (min-width: 992px){
-      padding: 40px 0;
-      font-size: 1.8rem;
-      text-align: justify;
+    @media (min-width: 992px) {
+      font-size: 30px;
     }
   }
 
   .approach_2 {
-    font-family: 'EB Garamond', serif;
-    font-weight: 400;
-    @media (max-width: 576px) {
-      font-size: 1.4rem;
-      line-height: 35px;
-      font-family: 'Tommy', sans-serif;
-      font-weight: bold;
-      //text-align: justify;
-    }
-    @media (min-width: 576px) and (max-width: 768px){
-      //padding: 40px 0;
-      font-size: 1.5rem;
-      padding: 0;
-      //text-align: justify;
-      //width: 75%;
-    }
-    @media (min-width: 768px) and (max-width: 992px){
-      padding: 40px 0;
-      font-size: 1.8rem;
-      text-align: justify;
-      //width: 75%;
-    }
-    @media screen and (min-width: 992px){
-      padding: 40px 0;
-      font-size: 2.2rem;
-      text-align: justify;
-    }
+      font-family: 'EB Garamond', serif;
+      font-size: 22px;
+      @media screen and (max-width: 576px) {
+        font-family: 'Tommy', sans-serif;
+        line-height: 35px;
+        font-size: 21px;
+        font-weight: bold;
+      }
+      @media screen and (min-width: 576px) and (max-width: 992px) {
+        font-family: 'EB Garamond', serif;
+        line-height: 40px;
+      }
+      @media (min-width: 992px) {
+        font-family: 'EB Garamond', serif;
+        text-align: justify;
+        font-size: 33px;
+        line-height: 50px;
+      }
   }
 
   .carousel-control-prev {
@@ -515,6 +486,7 @@
   .carousel_item_image {
     min-height: 350px;
     object-fit: cover;
+    border-radius: 10px;
     @media (max-width: 768px) {
       object-fit: fill;
     }
