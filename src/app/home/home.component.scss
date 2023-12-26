@@ -29,6 +29,9 @@
       }
       .nav_title{
         cursor: pointer;
+        @media screen and (max-width: 576px){
+          font-weight: 400;
+        }
       }
       span {
         font-weight: 300;
@@ -516,6 +519,9 @@
     font-size: 14px;
     line-height: 24px;
     font-family: 'Tommy', sans-serif;
+    @media (min-width: 576px) {
+      font-weight: 500;
+    }
     @media (min-width: 1025px) {
       font-size: 14px;
       line-height: 24px;
@@ -604,6 +610,9 @@
       font-family: 'Tommy', sans-serif;
       margin-bottom: .5em;
       //opacity: 0.9;
+      @media screen and (max-width: 576px){
+        font-weight: 500;
+      }
       @media (min-width: 1025px) {
         font-size: 14px;
         line-height: 24px;
