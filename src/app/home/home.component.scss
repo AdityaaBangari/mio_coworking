@@ -29,6 +29,7 @@
       }
       .nav_title{
         cursor: pointer;
+        font-weight: bold;
         @media screen and (max-width: 576px){
           font-weight: 400;
         }
@@ -393,9 +394,9 @@
 
   .membership_content {
     font-style: normal;
-    font-weight: 400;
+    font-weight: bold;
     font-family: 'Tommy', sans-serif;
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 24px;
     //opacity: 0.8;
 
@@ -516,14 +517,16 @@
   }
 
   .approach_carousel_item_content {
-    font-size: 14px;
+    font-size: 1rem;
     line-height: 24px;
+    font-weight: bold;
     font-family: 'Tommy', sans-serif;
     @media (min-width: 576px) {
       font-weight: 500;
     }
     @media (min-width: 1025px) {
-      font-size: 14px;
+      font-size: 1rem;
+      font-weight: bold;
       line-height: 24px;
     }
   }
@@ -598,15 +601,17 @@
     margin: 0 0 1em;
     //opacity: 0.9;
     @media (min-width: 1025px) {
-      font-size: 20px;
+      font-size: 1.2rem;
+      font-weight: bold;
       line-height: 32px;
     }
   }
 
   ul {
     li {
-      font-size: 14px;
+      font-size: 1rem;
       line-height: 24px;
+      font-weight: bold;
       font-family: 'Tommy', sans-serif;
       margin-bottom: .5em;
       //opacity: 0.9;
@@ -614,7 +619,7 @@
         font-weight: 500;
       }
       @media (min-width: 1025px) {
-        font-size: 14px;
+        font-size: 1rem;
         line-height: 24px;
       }
     }
