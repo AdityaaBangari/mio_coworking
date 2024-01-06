@@ -4,6 +4,9 @@
     width: 100%;
     background-color: #fdfbf7;
     border-bottom: 1px solid #faf0e6;
+    @media screen and (max-width: 420px){
+      padding: 0 15px;
+    }
     @media (min-width: 768px) {
       height: 48px;
     }
@@ -25,7 +28,7 @@
         padding: 0 20px;
       }
       @media screen and (max-width: 420px){
-        padding: 0 15px;
+        padding: 0 5px;
       }
       .nav_title{
         cursor: pointer;
@@ -82,6 +85,9 @@
     bottom: 0;
     height: 16rem;
     opacity: 85%;
+    @media screen and (max-width: 576px) {
+      display: none;
+    }
     @media screen and (min-width: 768px) and (max-width: 1200px) {
       opacity: 75%;
       z-index: -3;
@@ -502,6 +508,11 @@
     }
     .hide_in_tablet{
       @media (max-width: 992px) {
+        display: none;
+      }
+    }
+    .hide_in_desktop{
+      @media (min-width: 576px) {
         display: none;
       }
     }
