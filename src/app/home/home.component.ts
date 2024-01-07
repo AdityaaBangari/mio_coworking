@@ -23,6 +23,7 @@ export class HomeComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     console.log('Website made with passion by Aditya Bangari');
     this.onLandingAnimation();
+    this.startVideo();
     this.scrollEffect();
     this.initMap();
     // this.playVideo();
@@ -322,11 +323,13 @@ export class HomeComponent implements AfterViewInit {
     return timeline;
   }
 
-  // playVideo() {
-  //   if (this.videoPlayer) {
-  //     this.videoPlayer.nativeElement.play();
-  //   }
-  // }
+  startVideo() {
+    // Trigger video playback programmatically
+    const video = document.getElementById('video') as HTMLVideoElement;
+    if (video) {
+      video.play();
+    }
+  }
   toggleVisibility() {
     this.showCredit = true;
 
